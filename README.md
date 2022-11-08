@@ -10,6 +10,17 @@ allprojects {
 		}
 	}
   ```
+  OR For new version Android Studio (Dolphin | 2021.3.1) and projects add in settings.gradle file
+ ``` dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+  ```
+  
 > Step 2. Add the dependency
 
 ``` gradle
