@@ -53,10 +53,11 @@ Mavin
   
 Use timer like this
 //define
+```
     private lateinit var stopwatch: Stopwatch
-    
+   ``` 
 // onCreate/viewCreated
-  
+  ```
         stopwatch = buildStopwatch {
             startFormat("MM:SS:LL")
             /*  changeFormatWhen(5, TimeUnit.SECONDS, "5s -> MM:SS:LL")
@@ -71,10 +72,12 @@ Use timer like this
             }
         }
     
-    
+    ```
+    ```
  // to start timer
  stopwatch.start()
  // to stop
  stopwatch.stop()
  // to reset
  stopwatch.reset()
+ ```
