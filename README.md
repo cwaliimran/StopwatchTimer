@@ -51,3 +51,30 @@ Mavin
 	</dependency>
   ```
   
+Use timer like this
+//define
+    private lateinit var stopwatch: Stopwatch
+    
+// onCreate/viewCreated
+  
+        stopwatch = buildStopwatch {
+            startFormat("MM:SS:LL")
+            /*  changeFormatWhen(5, TimeUnit.SECONDS, "5s -> MM:SS:LL")
+              changeFormatWhen(10, TimeUnit.SECONDS, "10s -> MM:SS:LL")
+              changeFormatWhen(15, TimeUnit.SECONDS, "15s -> MM:SS:LL")
+              changeFormatWhen(20, TimeUnit.SECONDS, "20s -> MM:SS:LL")
+              actionWhen(5, TimeUnit.SECONDS) { showToast("5s passed") }
+              actionWhen(10, TimeUnit.SECONDS) { showToast("10s passed") }
+              actionWhen(20, TimeUnit.SECONDS) { showToast("20s passed") }*/
+            onTick { millis, formattedTime ->
+                binding.textViewTimer.text = formattedTime
+            }
+        }
+    
+    
+ // to start timer
+ stopwatch.start()
+ // to stop
+ stopwatch.stop()
+ // to reset
+ stopwatch.reset()
