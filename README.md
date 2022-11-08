@@ -56,7 +56,7 @@ Use timer like this
 ```
     private lateinit var stopwatch: Stopwatch
    ``` 
-// onCreate/viewCreated
+//Build stopwatch object in onCreate/viewCreated of activity or fragment
   ```
         stopwatch = buildStopwatch {
             startFormat("MM:SS:LL")
@@ -72,8 +72,6 @@ Use timer like this
             }
         }
     
-    ```
-    ```
  // to start timer
  stopwatch.start()
  // to stop
